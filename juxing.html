@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var canvas = document.createElement('canvas');
+        var W_H = 500;
+        canvas.width = W_H;
+        canvas.height = W_H;
+        canvas.style.cssText = 'border: 1px solid #000';
+        document.body.appendChild(canvas);
+        var ctx = canvas.getContext('2d');
+        let data = [
+            {
+                name: '小明',
+                num: 100
+            },
+            {
+                name: '小明1',
+                num: 70
+            },
+            {
+                name: '小明2',
+                num: 80
+            },
+            {
+                name: '小明3',
+                num: 40
+            },
+            {
+                name: '小明4',
+                num: 50
+            },
+        ]
+        ctx.translate(50, 450);
+
+        let maxSum = JSON.parse(JSON.stringify(data)).sort((a, b) => b.num - a.num)[0].num;
+        console.log(maxSum);
+
+        let margin = 400 / (data.length + 1);
+        ctx.clearRect(-50, -450, 500, 500);
+        ddd()
+        function ddd(e) {
+            //画轴
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(0, -400);
+            ctx.moveTo(0, 0);
+            ctx.lineTo(400, 0);
+
+            ctx.stroke();
+
+            //条形
+            ctx.save();
+            ctx.beginPath();
+            ctx.textAlign = 'end';
+            for (var i = 50; i <= 400; i += 50) {
+                ctx.moveTo(-3, -i);
+                ctx.lineTo(400, -i);
+                ctx.fillText(maxSum * (i / 400), -3, -i);
+            }
+            ctx.stroke();
+            ctx.restore();
+
+
+
+            for (var i = 0; i < data.length; i++) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.rect(margin * i + 50, 0, 25, -data[i].num / maxSum * 400);
+                ctx.fill();
+                ctx.restore();
+
+                ctx.save();
+                if (e && ctx.isPointInPath(e.offsetX, e.offsetY)) {
+                    ctx.fillStyle = 'blue';
+                    ctx.fillText(data[i].num, margin * i + 50, -data[i].num / maxSum * 400);
+                    ctx.fill();
+
+                    if (data[i].num >= 80) {
+                        ctx.save();
+                        ctx.fillStyle = 'black'
+                        ctx.fillText('优', e.offsetX - 50, (e.offsetY - 450));
+                        // ctx.fill();
+                        ctx.restore();
+                    }
+                    else if (data[i].num >= 60) {
+                        ctx.save();
+                        ctx.fillStyle = 'black'
+                        ctx.fillText('良', e.offsetX - 50, (e.offsetY - 450));
+                        // ctx.fill();
+                        ctx.restore();
+                    }
+                    else {
+                        ctx.save();
+                        ctx.fillStyle = 'black'
+                        ctx.fillText('不及格', e.offsetX - 50, (e.offsetY - 450));
+                        // ctx.fill();
+                        ctx.restore();
+                    }
+
+                }
+                ctx.fillText(data[i].name, 50 + margin * i, 10);
+                ctx.restore();
+            }
+
+
+        }
+
+        canvas.addEventListener('mousemove', function (e) {
+            ctx.clearRect(-50, -450, 500, 500);
+
+            ddd(e);
+        })
+    </script>
+</body>
+
+</html>
