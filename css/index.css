@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 12px;
+}
+
+.all {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.all > header {
+  height: 1.30667rem;
+  background: black;
+  background-image: url("../image/header/logo.png");
+  background-size: 5.6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.all section {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.all section > h2 {
+  text-align: center;
+  padding-top: 0.4rem;
+}
+
+.all section .first {
+  padding: 0 0.26667rem;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #ccc;
+}
+
+.all section .first > .yi {
+  display: flex;
+  justify-content: space-around;
+}
+
+.all section .first > .yi .dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.all section .first > .yi .dl .dt {
+  text-align: center;
+}
+
+.all section .first > .yi .dl .dt img {
+  display: inline-block;
+  height: 3.61333rem;
+}
+
+.all section .first > .yi .dl .dd > p {
+  color: #666666;
+}
+
+.all section .first > .yi .dl .dd > span {
+  color: red;
+  font-size: 15px;
+}
+
+.all section .second {
+  padding: 0 0.26667rem;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #ccc;
+}
+
+.all section .second > .yi {
+  display: flex;
+  justify-content: space-around;
+}
+
+.all section .second > .yi .dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.all section .second > .yi .dl .dt {
+  text-align: center;
+}
+
+.all section .second > .yi .dl .dt img {
+  display: inline-block;
+  height: 3.61333rem;
+}
+
+.all section .second > .yi .dl .dd > p {
+  color: #666666;
+}
+
+.all section .second > .yi .dl .dd > span {
+  color: red;
+  font-size: 15px;
+}
+
+.all section .third {
+  padding: 0 0.26667rem;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #ccc;
+}
+
+.all section .third > .yi {
+  display: flex;
+  justify-content: space-around;
+}
+
+.all section .third > .yi .dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.all section .third > .yi .dl .dt {
+  text-align: center;
+}
+
+.all section .third > .yi .dl .dt img {
+  display: inline-block;
+  height: 3.61333rem;
+}
+
+.all section .third > .yi .dl .dd > p {
+  color: #666666;
+}
+
+.all section .third > .yi .dl .dd > span {
+  color: red;
+  font-size: 15px;
+}
+
+.all section .third .er dl {
+  margin-left: 0.66667rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.all section .third .er dl dt img {
+  display: inline-block;
+  height: 3.61333rem;
+}
+
+.all section .third .er dl .dd > p {
+  color: #666666;
+}
+
+.all section .third .er dl .dd > span {
+  color: red;
+  font-size: 15px;
+}
+
+.all section .fourthly {
+  border-bottom: 1px solid;
+  padding-top: 20px;
+}
+
+.all section .fourthly .top {
+  width: 7.26667rem;
+  margin: 0 auto;
+  display: flex;
+}
+
+.all section .fourthly .top .p {
+  display: flex;
+  margin-right: 0.46667rem;
+}
+
+.all section .fourthly .top .p .s1 {
+  margin-right: 0.13333rem;
+  display: inline-block;
+  width: 0.89333rem;
+  height: 0.89333rem;
+  border: 1px solid;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .top .p .s2 {
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .top .p1 {
+  display: flex;
+}
+
+.all section .fourthly .top .p1 .s1 {
+  margin-right: 0.13333rem;
+  display: inline-block;
+  width: 0.89333rem;
+  height: 0.89333rem;
+  border: 1px solid;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .top .p1 .s2 {
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .bottom {
+  width: 7.26667rem;
+  margin: 0.4rem auto 0.49333rem auto;
+  display: flex;
+}
+
+.all section .fourthly .bottom .p {
+  display: flex;
+  margin-right: 1.13333rem;
+}
+
+.all section .fourthly .bottom .p .s1 {
+  margin-right: 0.13333rem;
+  display: inline-block;
+  width: 0.89333rem;
+  height: 0.89333rem;
+  border: 1px solid;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .bottom .p .s2 {
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .bottom .p1 {
+  display: flex;
+}
+
+.all section .fourthly .bottom .p1 .s1 {
+  margin-right: 0.13333rem;
+  display: inline-block;
+  width: 0.89333rem;
+  height: 0.89333rem;
+  border: 1px solid;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 0.89333rem;
+}
+
+.all section .fourthly .bottom .p1 .s2 {
+  line-height: 0.89333rem;
+}
+
+.all section .fifth .top > p {
+  padding: 0.49333rem 0;
+  border-bottom: 1px solid;
+}
+
+.all section .fifth .top > p span {
+  display: inline-block;
+  padding-left: 0.8rem;
+}
+
+.all section .fifth .top .two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all section .fifth .top .three {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.49333rem 0;
+  border-bottom: 1px solid;
+}
+
+.all section .fifth .top .three > span {
+  padding-left: 0.8rem;
+}
+
+.all section .fifth .top .three > div {
+  padding-right: 0.13333rem;
+}
+
+.all > footer {
+  display: flex;
+  height: 1.46667rem;
+  padding-top: 0.13333rem;
+  border-top: 1px solid #ccc;
+  background-image: url("../image/footer/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+
+.all > footer > a {
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  flex: 1;
+}
+
+.all > footer > a > img {
+  display: inline-block;
+  width: 0.8rem;
+}
